@@ -39,7 +39,7 @@ void loop() {
   int rightSensorValue = analogRead(rightSensorPin);
 
   // Check if both sensors detect the line
-  if (leftSensorValue > threshold && rightSensorValue > threshold) {
+  if (leftSensorValue <= threshold && rightSensorValue <= threshold) {
     // Move forward at set speed
     digitalWrite(leftMotorDirectionPin1, HIGH);
     digitalWrite(leftMotorDirectionPin2, LOW);
