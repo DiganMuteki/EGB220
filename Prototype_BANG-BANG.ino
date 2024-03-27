@@ -38,19 +38,8 @@ void loop() {
   int leftSensorValue = analogRead(leftSensorPin);
   int rightSensorValue = analogRead(rightSensorPin);
 
-  // Check if both sensors detect the line
-  if (leftSensorValue <= threshold && rightSensorValue <= threshold) {
-    // Move forward at set speed
-    digitalWrite(leftMotorDirectionPin1, HIGH);
-    digitalWrite(leftMotorDirectionPin2, LOW);
-    analogWrite(leftMotorSpeedPin, leftMotorSpeed);
-
-    digitalWrite(rightMotorDirectionPin1, HIGH);
-    digitalWrite(rightMotorDirectionPin2, LOW);
-    analogWrite(rightMotorSpeedPin, rightMotorSpeed);
-  } 
   // Check if left sensor detects the line
-  else if (leftSensorValue > threshold) {
+  if (leftSensorValue > threshold) {
     // Turn right at reduced speed
     digitalWrite(leftMotorDirectionPin1, HIGH);
     digitalWrite(leftMotorDirectionPin2, LOW);
@@ -73,13 +62,14 @@ void loop() {
     analogWrite(rightMotorSpeedPin, rightMotorSpeed);
   } 
   else {
-    // Stop (both sensors off the line)
-    digitalWrite(leftMotorDirectionPin1, LOW);
+    // Move forward at set speed
+    digitalWrite(leftMotorDirectionPin1, HIGH);
     digitalWrite(leftMotorDirectionPin2, LOW);
-    analogWrite(leftMotorSpeedPin, 0);
+    analogWrite(leftMotorSpeedPin, leftMotorSpeed);
 
-    digitalWrite(rightMotorDirectionPin1, LOW);
+    digitalWrite(rightMotorDirectionPin1, HIGH);
     digitalWrite(rightMotorDirectionPin2, LOW);
-    analogWrite(rightMotorSpeedPin, 0);
+    analogWrite(rightMotorSpeedPin, rightMotorSpeed);
+  } 
   }
-}
+
