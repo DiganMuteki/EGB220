@@ -1,11 +1,11 @@
 // Define motor pins for H-bridge control
-const int leftMotorSpeedPin = 9;    // PWM pin for left motor speed control
-const int leftMotorDirectionPin1 = 7;  // Direction pin 1 for left motor
-const int leftMotorDirectionPin2 = 8;  // Direction pin 2 for left motor
+const int leftMotorSpeedPin = A2;    // PWM pin for left motor speed control
+const int leftMotorDirectionPin1 = D1;  // Direction pin 1 for left motor
+const int leftMotorDirectionPin2 = D2;  // Direction pin 2 for left motor
 
-const int rightMotorSpeedPin = 10;   // PWM pin for right motor speed control
-const int rightMotorDirectionPin1 = 11;  // Direction pin 1 for right motor
-const int rightMotorDirectionPin2 = 12;  // Direction pin 2 for right motor
+const int rightMotorSpeedPin = A3;   // PWM pin for right motor speed control
+const int rightMotorDirectionPin1 = D3;  // Direction pin 1 for right motor
+const int rightMotorDirectionPin2 = D4;  // Direction pin 2 for right motor
 
 // Define sensor pins
 const int leftSensorPin = A0;  // Analog pins for IR sensor readings
