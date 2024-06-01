@@ -1,3 +1,6 @@
 # EGB220
-Motor control functions need work, and the motor logic in general.
-Things that also need work are is the threshold for the sensors, and the pin numbers.
+Prototype_BANG_BANG, is what the DEMO 1 code was based off of.
+
+DEMO_1 code, is the code that was used on demo_1. It consists of a bang bang controller. only alternating between two speeds. 
+
+The FINAL DEMO code, is the ones used on the final demo. It has a fully function P controller, with smoothed out response due to the added 10 ms delay.
