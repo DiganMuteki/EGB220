@@ -20,9 +20,6 @@ void setup() {
   // Define OUTPUT pins for motors
   pinMode(RightMotorSpeedPin, OUTPUT);
   pinMode(LeftMotorSpeedPin, OUTPUT);
-
-  // Initialize serial communication (if needed for debugging)
-  Serial.begin(19200);
 }
 
 void loop() {
